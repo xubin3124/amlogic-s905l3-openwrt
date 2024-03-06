@@ -12,7 +12,7 @@ on:
       source_branch:
         description: "Select the source branch"
         required: false
-        default: "openwrt-main"
+        default: "lede-master"
         type: choice
         options:
           - openwrt-main
@@ -21,7 +21,7 @@ on:
       openwrt_board:
         description: "Select device board"
         required: false
-        default: "all"
+        default: "s905l3-cm211"
         type: choice
         options:
           - all
@@ -153,7 +153,7 @@ on:
       openwrt_kernel:
         description: "Select kernel version"
         required: false
-        default: "5.15.1_6.1.1"
+        default: "5.15.1"
         type: choice
         options:
           - 5.4.1_5.10.1
@@ -195,12 +195,12 @@ on:
       builder_name:
         description: "Set OpenWrt builder signature."
         required: false
-        default: "ophub"
+        default: "makarov"
         type: choice
         options:
           - ophub
           - angel
-          - yourname
+          - makarov
 
 env:
   FEEDS_CONF: config/${{ inputs.source_branch }}/feeds.conf.default
